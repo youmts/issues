@@ -9,6 +9,12 @@ defmodule Issues.CLI do
   table of the last _n_ issues in a github project
   """
 
+  def main(argv) do
+    argv
+      |> parse_args
+      |> process
+  end
+
   def run(argv) do
     argv
     |> parse_args
